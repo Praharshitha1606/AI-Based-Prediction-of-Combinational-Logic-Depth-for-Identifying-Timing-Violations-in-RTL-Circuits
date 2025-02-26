@@ -1,0 +1,7 @@
+read_verilog design.sv
+synth -top wallace_4bit
+opt_clean
+flatten
+stat
+write_verilog -noattr synth_wallace.v
+show -colors 1 -viewer touch -format svg
